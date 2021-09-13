@@ -1,0 +1,178 @@
+{
+  "type": "record",
+  "name": "PassengerProfile",
+  "namespace": "com.pickme.events.passenger",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "body",
+      "type": {
+        "type": "record",
+        "name": "Body",
+        "namespace": "com.pickme.events.passenger.passenger_profile",
+        "fields": [
+          {
+            "name": "id",
+            "type": "int"
+          },
+          {
+            "name": "salutation",
+            "type": "string"
+          },
+          {
+            "name": "firstname",
+            "type": "string"
+          },
+          {
+            "name": "lastname",
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "type": "string"
+          },
+          {
+            "name": "phone",
+            "type": "string"
+          },
+          {
+            "name": "address",
+            "type": "string"
+          },
+          {
+            "name": "dob",
+            "type": "string"
+          },
+          {
+            "name": "referral_code",
+            "type": "string"
+          },
+          {
+            "name": "device_id",
+            "type": "string"
+          },
+          {
+            "name": "device_token",
+            "type": "string"
+          },
+          {
+            "name": "device_type",
+            "type": "int"
+          },
+          {
+            "name": "fcm_token",
+            "type": "string"
+          },
+          {
+            "name": "push_version",
+            "type": "int"
+          },
+          {
+            "name": "login_status",
+            "type": "string"
+          },
+          {
+            "name": "user_status",
+            "type": "string"
+          },
+          {
+            "name": "default_payment_method",
+            "type": "int"
+          },
+          {
+            "name": "created_by",
+            "type": "int"
+          },
+          {
+            "name": "country_id",
+            "type": "int"
+          },
+          {
+            "name": "last_active_date",
+            "type": "string"
+          },
+          {
+            "name": "created_at",
+            "type": "long"
+          },
+          {
+            "name": "updated_at",
+            "type": "long"
+          },
+          {
+            "name": "last_login",
+            "type": "long"
+          }
+        ]
+      }
+    },
+    {
+      "name": "created_at",
+      "type": "long"
+    },
+    {
+      "name": "expiry",
+      "type": "long",
+      "default": 0
+    },
+    {
+      "name": "version",
+      "type": "int",
+      "default": 0
+    },
+    {
+      "name": "trace_info",
+      "type": {
+        "type": "record",
+        "name": "TraceInfo",
+        "fields": [
+          {
+            "name": "trace_id",
+            "type": {
+              "type": "record",
+              "name": "TraceId",
+              "fields": [
+                {
+                  "name": "high",
+                  "type": "long",
+                  "default": 0
+                },
+                {
+                  "name": "low",
+                  "type": "long",
+                  "default": 0
+                }
+              ]
+            }
+          },
+          {
+            "name": "span_id",
+            "type": "long",
+            "default": 0
+          },
+          {
+            "name": "parent_id",
+            "type": "long",
+            "default": 0
+          },
+          {
+            "name": "sampled",
+            "type": "boolean",
+            "default": false
+          }
+        ]
+      }
+    }
+  ]
+}
